@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--home page that shows image slider from app.js-->
+
+<head>
+    <title>ANUGraduateShow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="images/icon.jpg" type="image/jpg">
+
+</head>
+
+<body>
+    <header>
+        <!--navigation bar-->
+
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                    <i class="fa fa-bars"></i>
+                </span>
+            <a href="#" class="logo">Graduate Show</a>
+
+            <ul class="main-nav" id="menu">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-fw fa-home" aria-hidden="true"></i><u>Home</u></a>
+                </li>
+                <li>
+                    <a href="artist.html">
+                        <i class="fa fa-users" aria-hidden="true"></i> Artist
+                    </a>
+                </li>
+                <li>
+                    <a href="degree.html">
+                        <i class="fa fa-university" aria-hidden="true"></i> Degree
+                    </a>
+                </li>
+                <li>
+                    <a href="workshop.html">
+                        <i class="fa fa-tasks" aria-hidden="true"></i> Workshop
+                    </a>
+                </li>
+                <li>
+                    <a href="#map">
+                        <i class="fa fa-map" aria-hidden="true"></i> Find us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--sliderContent that is the screen shows the horizontal slider image proportionally-->
+
+    <div class="sliderContent">
+        <div class="slider">
+            <img src="images/thumbnails/Abello_M.jpg" alt="Abello_M">
+            <div class="overlay">
+                <div class="text">
+                    Animation & Video
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Alex_S.jpg" alt="Alex_S" />
+            <div class="overlay">
+                <div class="text">
+                    Texttiles
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Rasheed_Araeen_2.jpg" alt="Rasheed_Araeen_2" />
+            <div class="overlay">
+                <div class="text">
+                    Furniture
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/artist-images/Baker_Lucy.jpg" alt="Baker_Lucy" />
+            <div class="overlay">
+                <div class="text">
+                    Ceramics
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Bilal_Rachel.jpg" alt="Bilal_Rachel" />
+            <div class="overlay">
+                <div class="text">
+                    Sculpture & Spatial Practice
+                </div>
+            </div>
+
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Bowman_M_1.jpg" alt="Bowman_M_1" />
+            <div class="overlay">
+                <div class="text">
+                    Printmedia
+                </div>
+            </div>
+
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Burden_MB.jpg" alt="Burden_MB" />
+            <div class="overlay">
+                <div class="text">
+                    Photomedia
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Campbell_Thomas.jpg" alt="Campbell_Thomas" />
+            <div class="overlay">
+                <div class="text">
+                    painting
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/CARDONE_M.jpg" alt="CARDONE_M" />
+            <div class="overlay">
+                <div class="text">
+                    Glass
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <img src="images/thumbnails/Clarke_H_1.jpg" alt="Clarke_H_1" />
+            <div class="overlay">
+                <div class="text">
+                    Jewellery & Object
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#8592;</a>
+    <a class="next" onclick="plusSlides(1)">&#8594;</a>
+
+    <!--the horizontal scoll container that contains the images going to be shown in the sliderContent-->
+    <div class="scroll-container">
+        <div class="scrollmenu">
+            <img class="demo" src="images/thumbnails/Abello_M.jpg" onclick="currentSlide(1)" alt="Abello_M" />
+            <img class="demo" src="images/thumbnails/Alex_S.jpg" onclick="currentSlide(2)" alt="Alex_S" />
+            <img class="demo" src="images/thumbnails/Rasheed_Araeen_2.jpg" onclick="currentSlide(3)" alt="Rasheed_Araeen_2" />
+            <img class="demo" src="images/artist-images/Baker_Lucy.jpg" onclick="currentSlide(4)" alt="Baker_Lucy" />
+            <img class="demo" src="images/thumbnails/Bilal_Rachel.jpg" onclick="currentSlide(5)" alt="Bilal_Rachel" />
+            <img class="demo" src="images/thumbnails/Bowman_M_1.jpg" onclick="currentSlide(6)" alt="Bowman_M_1" />
+            <img class="demo" src="images/thumbnails/Burden_MB.jpg" onclick="currentSlide(7)" alt="Burden_MB" />
+            <img class="demo" src="images/thumbnails/Campbell_Thomas.jpg" onclick="currentSlide(8)" alt="Campbell_Thomas" />
+            <img class="demo" src="images/thumbnails/CARDONE_M.jpg" onclick="currentSlide(9)" alt="CARDONE_M" />
+            <img class="demo" src="images/thumbnails/Clarke_H_1.jpg" onclick="currentSlide(10)" alt="Clarke_H_1" />
+        </div>
+    </div>
+
+    <!--list the artists that is going to be show from artists directory-->
+    <div class="artist-container">
+        <h1 class="artist-title">Meet our artist</h1>
+        <div class="card-wrapper">
+            <div class="card">
+                <img src="images/thumbnails/Vincent_Namatjira_1.jpg" alt="Vincent_Namatjira_1" class="card-img">
+                <div class="artName">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <h1>Vincent Namatjira</h1>
+                </div>
+                <p class="workshop">Painting</p>
+                <div class="artDegree">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+
+                    <p class="degree">Bachelor of Visual Arts(painting)</p>
+                </div>
+
+                <a href="artists/artist_Vincent_Namatjira.html" class="btn">+View More</a>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://thisisnofantasy.com/artist/vincent-namatjira/">
+                            <i class="fa fa-globe"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/Vincent_Namatjira">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <img src="images/thumbnails/Joyce_Ho_1.jpg" alt="Joyce_Ho_1" class="card-img">
+                <div class="artName">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <h1>Joyce Ho</h1>
+                </div>
+                <p class="workshop">Photomedia</p>
+                <div class="artDegree">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+
+                    <p class="degree">Master of Visual Arts</p>
+                </div>
+
+                <a href="artists/artist_Joyce_Ho.html" class="btn">+View More</a>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://joycehostudio.com">
+                            <i class="fa fa-globe"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/Joyce_Ho">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="images/thumbnails/Rasheed_Araeen_2.jpg" alt="Rasheed_Araeen_2" class="card-img">
+                <div class="artName">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <h1>Rasheed Araeen</h1>
+                </div>
+                <p class="workshop">Furniture</p>
+                <div class="artDegree">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+
+                    <p class="degree">Bachelor of Visual Arts (Furniture)</p>
+                </div>
+
+                <a href="artists/artist_Rasheed_Araeen.html" class="btn">+View More</a>
+                <ul class="social-media">
+                    <li>
+                        <a href="https://www.grosvenorgallery.com/artists/50-rasheed-araeen/works/">
+                            <i class="fa fa-globe"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/Rasheed_Araeen">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="images/thumbnails/Geumhyung_Jeong_1.jpg" alt="Geumhyung_Jeong_1" class="card-img">
+                <div class="artName">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <h1>Geumhyung Jeong</h1>
+                </div>
+                <p class="workshop">Sculpture</p>
+                <div class="artDegree">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+
+                    <p class="degree">Bachelor of Visual Arts (Sculpture)</p>
+                </div>
+
+                <a href="artists/artist_Geumhyung_Jeong.html" class="btn">+View More</a>
+                <ul class="social-media">
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-globe"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/Geumhyung_Jeong">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!--show the google map that describes ANU design & art building-->
+
+    <div class="footer-location-wrapper" id="map"></div>
+
+    <!--footer distribution-->
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Graduate Show</h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a> ·
+                <a href="artist.html">Artist</a> ·
+                <a href="degree.html">Degree</a> ·
+                <a href="workshop.html">Workshop</a>
+            </p>
+
+            <p class="footer-copyright">copyright &copy; 2019</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div class="footer-address">
+                <i class="fa fa-map-marker"></i>
+                <p>
+                    <span>105 Childers St</span> Acton ACT 2601</p>
+            </div>
+
+            <div class="footer-address">
+                <i class="fa fa-phone"></i>
+                <p>+61 451003138</p>
+            </div>
+
+            <div class="footer-address">
+                <i class="fa fa-envelope"></i>
+                <p>
+
+                    <span>u6695264</span>@anu.edu.au
+                </p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+            <h3>About the website</h3>
+            <a class="deploy" href="https://desnu6695264.netlify.com/">https://desnu6695264.netlify.com/</a>
+            <div class="footer-icons">
+                <div class="social-address">
+                    <a href="https://www.facebook.com/ANUartdesign/" class="fa fa-facebook"></a>
+                </div>
+                <div class="social-address">
+                    <a href="https://twitter.com/anuartdesign?lang=en" class="fa fa-twitter"></a>
+                </div>
+                <div class="social-address">
+                    <a href="https://www.instagram.com/anuartdesign/" class="fa fa-instagram"></a>
+                </div>
+                <div class="social-address">
+                    <a href="https://www.pinterest.com.au/" class="fa fa-pinterest"></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!--bottom copyright information-->
+
+    <div class="bottom-footer">
+        <div class="footer-container">
+            <div class="center-copyright">
+                <div class="col-copyright">
+                    <p>Copyright &copy; 2019 | Graduate Show</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--external javascript files && google map API-->
+
+    <script src="js/app.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSoxBXvR6TJX4-dZ42V3w1ca8gv28HkVw&callback=initMap" async defer></script>
+</body>
+
+</html>

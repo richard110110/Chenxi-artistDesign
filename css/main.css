@@ -1,0 +1,402 @@
+/*--CHENXI GUO u6695264--*/
+
+/*--css style for index page--*/
+
+/*--import google fonts--*/
+
+@import url('https://fonts.googleapis.com/css?family=Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*--style scrollbar--*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(260deg, #2376ae 0%, #925a9c 100%);
+}
+
+/*--image slider container--*/
+
+.container {
+    overflow: scroll;
+    margin-top: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.scroll-container {
+    position: relative;
+    margin: 0;
+    overflow-x: scroll;
+}
+
+.sliderContent {
+    position: relative;
+    margin-top: 40px;
+}
+
+/*--last image and next image button--*/
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(22, 156, 56);
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*--On hover, add a black background color with a little bit see-through--*/
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(59, 11, 11, 0.8);
+}
+
+/*--the horizontal scroll image slider--*/
+
+div.scrollmenu {
+    background-color: #333;
+    overflow-x: scroll;
+    white-space: nowrap;
+    bottom: 0;
+    display: inline-flex;
+    height: auto;
+    position: relative;
+}
+
+div.scrollmenu img {
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 300px;
+    width: 300px;
+    padding: 5px 0;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.demo:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.slider {
+    display: none;
+    background-size: cover;
+    background-position: center center;
+}
+
+.slider img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+/*--the screen that display the image from the above horizontal slider show--*/
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+.overlay:hover {
+    opacity: 0.5;
+}
+
+.text {
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Source Sans Pro', sans-serif;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/*--card container for the all artist's card--*/
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: 3rem 0 0 0;
+    width: 100%;
+}
+
+.artist-container {
+    padding-bottom: 20px;
+    background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    border-top: 10px inset #3ac7dd;
+}
+
+.artist-container .artist-title {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+    font-size: 4rem;
+    letter-spacing: 3px;
+    text-align: center;
+    color: rgb(75, 68, 68);
+    position: relative;
+    margin: 0 -3px 5rem 0;
+    margin: 20px 0 0 0;
+}
+
+.artist-container .card a {
+    text-decoration: none;
+}
+
+/*--each artist card--*/
+
+.card {
+    width: 35rem;
+    background-color: #edeff5fb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-right: 10px;
+    box-shadow: -7px 10px 5px -4px rgba(17, 75, 222, 1);
+    border: 5px inset #2eb9ce;
+}
+
+/*--each artist's artwork && related information && social links--*/
+
+.card img {
+    height: auto;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    flex-wrap: wrap;
+    border: 5px inset #b625aa8c;
+}
+
+.card h1 {
+    font-size: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+.card .workshop {
+    color: #131010;
+    font-size: 2.5rem;
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card .degree {
+    color: #131010;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Jotia W00", sans-serif;
+}
+
+.card .about {
+    font-size: 1rem;
+    color: #131010b7;
+    margin: 1.5rem 0 0 0;
+    text-indent: 30px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card .btn {
+    padding: 1rem 1.5rem;
+    background-color: #2376ae;
+    border-radius: 2rem;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #131010;
+    font-family: "Jotia W00", sans-serif;
+}
+
+/*--go to artist detailed page button style--*/
+
+.card .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: -7px 10px 5px -4px rgba(0, 0, 0, 0.73);
+    font-size: 1rem;
+}
+
+.card .btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/*--each artist's social link style--*/
+
+.card .social-media {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 0;
+    margin: 1.5rem 0 0 0;
+    justify-content: space-evenly;
+    border-top: 5px inset #3ac7dd;
+    list-style: none;
+}
+
+.card .social-media i {
+    text-decoration: none;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border-radius: 2px;
+    font-size: 3rem;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 3px;
+}
+
+.card .fa-globe {
+    background: #3B5998;
+    color: white;
+}
+
+.card .fa-instagram {
+    background: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+    color: white;
+}
+
+.card .fa:hover {
+    opacity: 0.7;
+    box-shadow: -7px 10px 5px -4px rgba(17, 75, 222, 1);
+}
+
+.artName i {
+    display: inline-flex;
+    font-size: 40px;
+    margin-right: 10px;
+    color: black;
+}
+
+.artName h1 {
+    display: inline-flex;
+}
+
+.artDegree i {
+    display: inline-flex;
+    font-size: 40px;
+    margin-right: 10px;
+    color: black;
+}
+
+.artDegree p {
+    display: inline-flex;
+}
+
+/*responsive setting for artName, degree because of their font size*/
+
+@media screen and (max-width: 500px) {
+    .artName i {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .artDegree i {
+        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .artDegree p {
+        margin-top: 10px;
+    }
+}
+
+/*responsive setting for card section and artist's social links*/
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .card {
+        margin: 2rem;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .card .social-media {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .card .fa-twitter {
+        margin: 10px 0 0 0;
+    }
+    .card .fa-instagram {
+        margin: 10px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .prev,
+    .next {
+        display: none;
+    }
+}
